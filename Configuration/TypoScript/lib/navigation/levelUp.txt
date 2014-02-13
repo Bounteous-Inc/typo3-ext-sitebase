@@ -1,0 +1,16 @@
+
+lib.navigation.levelUp = HMENU
+lib.navigation.levelUp {
+
+	special = browse
+	special {
+		items = up
+	}
+
+	stdWrap.dataWrap = <div class="nav-level-up {field:class}">|</div>
+
+	1 = TMENU
+	1.NO.stdWrap.htmlSpecialChars = 1
+	1.NO.stdWrap.wrap = back to&nbsp;|
+}
+

@@ -1,0 +1,56 @@
+
+# reset css classes
+RTE.classes >
+RTE.classes {
+
+}
+
+RTE.classesAnchor >
+RTE.classesAnchor {
+
+}
+
+
+RTE.default {
+
+	# Markup options
+	enableWordClean = 1
+	removeTrailingBR = 1
+	removeComments = 1
+	removeTags = center, font, o:p, sdfield, strike, u
+	removeTagsAndContents = link, meta, script, style, title
+
+	# Buttons, toolbars
+	showButtons =  bold, italic, blockstyle, unorderedlist, orderedlist, link, removeformat
+	toolbarOrder = bold, italic, bar, blockstyle, space, removeformat, bar, unorderedlist, orderedlist, bar, link, bar, chMode
+
+	ignoreMainStyleOverride = 1
+
+	# reset css classes
+	buttons {
+
+		blockstyle {
+			tags.div.allowedClasses =
+			tags.p.allowedClasses =
+			tags.table.allowedClasses =
+			tags.td.allowedClasses =
+		}
+
+		textstyle {
+			tags.span.allowedClasses =
+		}
+
+		link {
+			properties.class.allowedClasses =
+			page.properties.class.default =
+			url.properties.class.default =
+			file.properties.class.default =
+			mail.properties.class.default =
+		}
+
+	}
+
+	# add all available classes, otherwise they're removed when saving
+	proc.allowedClasses =
+
+}

@@ -1,0 +1,14 @@
+
+
+[globalVar = LIT:production = {$context.environment}] && [userFunc = user_isInDevIpMask]
+
+page {
+
+	1 = TEXT
+	1.value (
+		<div id="environment-production" style="background: #ee0000; padding: 5px; text-transform: uppercase;">Production</div>
+	)
+
+}
+
+[end]

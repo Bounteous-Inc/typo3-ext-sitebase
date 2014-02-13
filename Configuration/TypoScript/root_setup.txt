@@ -1,0 +1,90 @@
+
+# site base includes
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/primary.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/directory.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/prevNext.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/levelUp.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/media/pageFirstImage.txt">
+
+
+# extension includes
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
+
+
+page = PAGE
+page {
+
+	meta {
+		keywords.field = keywords
+		description.field = description
+	}
+
+	10 = FLUIDTEMPLATE
+	10 {
+		file.stdWrap.cObject = CASE
+		file.stdWrap.cObject {
+			# go up the rootline, find a template that has been inherited to subpages
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			# use a template specified for the current page
+			key.override.field = backend_layout
+
+			default = TEXT
+			default.value = EXT:site{$site.sitePackageName}/Resources/Private/Templates/Page/Default.html
+		}
+
+		partialRootPath = EXT:site{$site.sitePackageName}/Resources/Private/Partials
+		layoutRootPath = EXT:site{$site.sitePackageName}/Resources/Private/Layouts
+
+		variables {
+			pageTitle = TEXT
+			pageTitle.data = page:title
+
+			contentMain < styles.content.get
+			contentLeft < styles.content.getLeft
+			contentRight < styles.content.getRight
+		}
+	}
+
+}
+
+config {
+	doctype = html5
+
+	tx_realurl_enable = 1
+	baseURL = /
+	prefixLocalAnchors = all
+
+	disablePrefixComment = 1
+
+	admPanel = 1
+
+	sendCacheHeaders = 1
+
+	compressCss = 1
+	concatenateCss = 1
+	compressJs = 1
+	concatenateJs = 1
+	removeDefaultJS = external
+}
+
+site {
+	title = 
+
+	format {
+		date {
+			short = m/d/Y
+			medium = D, m/d/Y
+			long = l, F j, Y
+		}
+
+		dateTime {
+			short = m/d/Y - H:i
+			medium = D, m/d/Y - H:i
+			long = l, F j, Y - H:i
+		}
+	}
+
+	template {
+
+	}
+}

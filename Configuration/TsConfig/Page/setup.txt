@@ -1,0 +1,23 @@
+
+# TCE forms
+TCEFORM {
+
+	tt_content {
+		# Hide item 0 to remove the "Default" option, which is just the same as H1, unless you need to otherwise specify.
+	 	header_layout.removeItems = 0
+		header_layout.altLabels.1 = Header Level 1 - H1
+		header_layout.altLabels.2 = Header Level 2 - H2
+		header_layout.altLabels.3 = Header Level 3 - H3
+		header_layout.altLabels.4 = Header Level 4 - H4
+		header_layout.altLabels.5 = Header Level 5 - H5
+	}
+
+}
+
+# Page Module
+mod.web_layout {
+
+	# Remove the ugly search box, it's almost never used anyway
+	disableSearchBox = 1
+
+}

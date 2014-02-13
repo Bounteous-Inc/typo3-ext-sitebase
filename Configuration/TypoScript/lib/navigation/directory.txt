@@ -1,0 +1,16 @@
+
+lib.navigation.directory = HMENU
+lib.navigation.directory {
+	special = directory
+	special.value.field = directoryRoot
+	
+	stdWrap.dataWrap = <ul class="nav-directory {field:class}">|</ul>
+
+	1 = TMENU
+	1 {
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			wrapItemAndSub = <li>|</li>
+		}
+	}
+}

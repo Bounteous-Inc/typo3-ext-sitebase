@@ -1,0 +1,9 @@
+
+tt_content.menu.20.1.1 {
+
+	# add an active state for menus and make them highlight the current page
+	ACT < .NO
+	ACT = 1
+	ACT.wrapItemAndSub = <li class="active">|</li>
+
+}

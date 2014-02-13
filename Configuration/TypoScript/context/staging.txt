@@ -1,0 +1,14 @@
+
+
+[globalVar = LIT:staging = {$context.environment}]
+
+page {
+
+	1 = TEXT
+	1.value (
+		<div id="environment-staging" style="background: #ffdd00; padding: 5px; text-transform: uppercase;">Staging</div>
+	)
+
+}
+
+[end]

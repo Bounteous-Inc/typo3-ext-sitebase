@@ -1,0 +1,20 @@
+lib.navigation.primary = HMENU
+lib.navigation.primary {
+	entryLevel = 0
+	
+	stdWrap.dataWrap = <ul class="nav-primary {field:class}">|</ul>
+
+	1 = TMENU
+	1 {
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			wrapItemAndSub = <li>|</li>
+		}
+
+		ACT < .NO
+		ACT = 1
+		ACT {
+			wrapItemAndSub = <li class="active">|</li>
+		}
+	}
+}

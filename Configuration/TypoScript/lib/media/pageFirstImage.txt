@@ -1,0 +1,14 @@
+
+lib.media.pageFirstImage = FILES
+lib.media.pageFirstImage {
+	references {
+		data = levelmedia:-1,slide
+		listNum = 0
+	}
+
+	renderObj = IMAGE
+	renderObj {
+		file.import.data = file:current:publicUrl
+	}
+
+}

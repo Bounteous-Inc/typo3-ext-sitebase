@@ -1,0 +1,21 @@
+
+lib.navigation.secondary = HMENU
+lib.navigation.secondary {
+	entryLevel = 1
+
+	stdWrap.dataWrap = <ul class="nav-secondary {field:class}">|</ul>
+
+	1 = TMENU
+	1 {
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			wrapItemAndSub = <li>|</li>
+		}
+
+		ACT < .NO
+		ACT = 1
+		ACT {
+			wrapItemAndSub = <li class="active">|</li>
+		}
+	}
+}

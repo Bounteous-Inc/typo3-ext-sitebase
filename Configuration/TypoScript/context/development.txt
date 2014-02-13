@@ -1,0 +1,30 @@
+
+
+[globalVar = LIT:development = {$context.environment}]
+
+page {
+
+	1 = TEXT
+	1.value (
+		<div id="environment-development" style="background: #66cc33; padding: 5px; text-transform: uppercase;">Development</div>
+	)
+
+}
+
+# turn off caching, compression, minification
+config {
+	disablePrefixComment = 0
+
+	sendCacheHeaders = 0
+
+	compressCss = 0
+	concatenateCss = 0
+	compressJs = 0
+	concatenateJs = 0
+	removeDefaultJS = 0
+}
+
+plugin.tx_minify.enable = 0
+plugin.tx_minify.debug = 1
+
+[end]

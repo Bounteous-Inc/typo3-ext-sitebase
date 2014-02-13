@@ -1,0 +1,26 @@
+
+lib.navigation.prevNext = HMENU
+lib.navigation.prevNext {
+
+	special = browse
+	special {
+		items = prev|next
+
+		prev.fields.title = prev
+		next.fields.title = next
+	}
+
+	stdWrap.dataWrap = <ul class="nav-prev-next {field:class}">|</ul>
+
+	1 = TMENU
+	1 {
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			wrapItemAndSub = <li>|</li>
+
+			allWrap = |&nbsp;&#124; ||
+		}
+
+	}
+}
+
