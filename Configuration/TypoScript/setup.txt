@@ -5,7 +5,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/prevNext.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/navigation/levelUp.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/media/pageFirstImage.txt">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitebase/Configuration/TypoScript/lib/currentYear.txt">
 
 # extension includes
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
