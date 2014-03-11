@@ -1,0 +1,5 @@
+lib.currentYear = TEXT
+lib.currentYear {
+    data = date:U
+    strftime =%Y
+}
